@@ -1,0 +1,39 @@
+{
+  "id": "external-autosuggest-widget",
+  "name": "external-autosuggest-widget",
+  "srcdoc": "./build/index.html",
+  "fieldTypes": ["Symbol", "Text"],
+  "parameters": {
+    "instance": [
+      {
+        "id": "api_url",
+        "type": "Symbol",
+        "name": "API URL",
+        "description": "API Endpoint URL used to retrieve the autocomplete suggestions",
+        "required": true
+      },
+      {
+        "id": "display_mode",
+        "name": "Display Mode",
+        "description": "How the options should be presented to editor",
+        "type": "Enum",
+        "default": "grid",
+        "options": [{ "grid": "Grid" }, { "list": "List" }],
+        "labels": { "empty": "Please choose a Display Mode" },
+        "required": true
+      },
+      {
+        "id": "default_value",
+        "name": "Default Value",
+        "description": "The default value for this field",
+        "type": "Symbol",
+        "required": false
+      },
+      {
+        "id": "helpText",
+        "type": "Symbol",
+        "name": "Help Text"
+      }
+    ]
+  }
+}
