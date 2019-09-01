@@ -66,7 +66,11 @@ export class App extends React.Component {
       this.onExternalChange
     )
 
-    const api_url = this.props.sdk.parameters.instance.api_url
+    let api_url = this.props.sdk.parameters.instance.api_url
+
+    if (api_url.includes('localhost')) {
+      api_url = api_url.replace('https', 'http')
+    }
 
     fetch(api_url, { signal: this.abortController.signal })
       .then((res) => res.json())
