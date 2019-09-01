@@ -1,7 +1,7 @@
 {
   "id": "external-autosuggest-widget",
   "name": "external-autosuggest-widget",
-  "src": "https://raw.githubusercontent.com/salles-sandro/contentful-external-autosuggest-widget/master/build/index.html",
+  "src": "https://salles-sandro.github.io/contentful-external-autosuggest-widget/build/index.html",
   "fieldTypes": ["Symbol", "Text"],
   "parameters": {
     "instance": [
