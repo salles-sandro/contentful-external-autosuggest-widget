@@ -95,6 +95,7 @@ export class App extends React.Component {
           this.setState(state)
         },
         (error) => {
+          console.log(error)
           this.setState({
             hasLoaded: true,
             error: error
