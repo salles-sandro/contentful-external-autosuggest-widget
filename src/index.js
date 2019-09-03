@@ -72,7 +72,7 @@ export class App extends React.Component {
       api_url = api_url.replace('https', 'http')
     }
 
-    fetch(api_url, { signal: this.abortController.signal, mode: 'no-cors' })
+    fetch(api_url, { signal: this.abortController.signal })
       .then((res) => res.json())
       .then(
         (available) => {
