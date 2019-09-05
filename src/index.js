@@ -99,7 +99,7 @@ export class App extends React.Component {
           this.setState({
             hasLoaded: true,
             error: error
-          })
+          })``
         }
       )
   }
@@ -136,6 +136,7 @@ export class App extends React.Component {
 
   onChange = (e, { newValue }) => {
     $('.suggestion-container').removeClass('selected')
+
     $(e.target)
       .parents('.suggestion-container:first')
       .addClass('selected')
@@ -154,6 +155,9 @@ export class App extends React.Component {
     } else if (default_value) {
       this.setState({ value: default_value })
       this.props.sdk.field.setValue(default_value)
+    } else {
+      this.setState({ value: '' })
+      this.props.sdk.field.setValue('')
     }
   }
 
