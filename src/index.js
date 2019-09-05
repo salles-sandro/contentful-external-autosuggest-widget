@@ -155,7 +155,9 @@ export class App extends React.Component {
     } else if (default_value) {
       this.setState({ value: default_value })
       this.props.sdk.field.setValue(default_value)
-    } else {
+    } else
+    {
+      console.log('NO VALUE')
       this.setState({ value: '' })
       this.props.sdk.field.setValue('')
     }
